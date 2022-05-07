@@ -19,10 +19,14 @@ function  Goalinput(props) {
         setenteredGoalText("");
       }
 
+      function displayCloseHandler(){
+        props.close();
+      }
+
     return( 
     <Modal visible={props.show} animationType="fade">
 
-<View style={styles.GoalBox}>
+    <View style={styles.GoalBox}>
     <TextInput style={styles.Goalinput}
      placeholder="Whats your goal"
      
@@ -31,6 +35,8 @@ function  Goalinput(props) {
     />
       <Button title="Add"  onPress={addButtonH} />
     </View>
+    <Button color="#E5CB9F" title='cancel' onPress={displayCloseHandler}/>
+    
     </Modal>
    
     

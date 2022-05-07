@@ -32,6 +32,7 @@ export default function App() {
     function displayAddHandler(){
       setModaIsVisisble(true);
     }
+    
     function displayCloseHandler(){
       setModaIsVisisble(false);
     }
@@ -41,10 +42,9 @@ export default function App() {
     <View style={styles.appcontainer}>
 
     <Button color="#E5CB9F" title='Add' onPress={displayAddHandler}/>
-    <Button color="#E5CB9F" title='cancel' onPress={displayCloseHandler}/>
     
     
-    <Goalinput onAddGoal={addButtonH} show={modaIsVisisble}/>
+    <Goalinput onAddGoal={addButtonH} show={modaIsVisisble} close={displayCloseHandler}  />
    
      <FlatList data={courseGoals} renderItem={
        (itemData)=>{
